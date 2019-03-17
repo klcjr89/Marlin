@@ -28,7 +28,7 @@
   #error "Oops! Make sure you have the LPC1769 environment selected in your IDE."
 #endif
 
-#define BOARD_NAME        "Azteeg X5 MINI WIFI"
+#define BOARD_NAME        "Azteeg X5 MINI"
 #define BOARD_WEBSITE_URL "http://www.panucatt.com/azteeg_X5_mini_reprap_3d_printer_controller_p/ax5mini.htm"
 
 //
@@ -74,8 +74,8 @@
 //
 // DIGIPOT slave addresses
 //
-#define DIGIPOT_I2C_ADDRESS_A 0x58   // shifted slave address for first DIGIPOT (0x58 <- 0x2C << 1)
-#define DIGIPOT_I2C_ADDRESS_B 0x5C   // shifted slave address for second DIGIPOT (0x5C <- 0x2E << 1)
+#define DIGIPOT_I2C_ADDRESS_A 0x2C   // unshifted slave address for first DIGIPOT 0x2C (0x58 <- 0x2C << 1)
+#define DIGIPOT_I2C_ADDRESS_B 0x2E   // unshifted slave address for second DIGIPOT 0x2E (0x5C <- 0x2E << 1)
 
 //
 // Temperature Sensors
