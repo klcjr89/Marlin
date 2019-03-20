@@ -697,7 +697,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 2708 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 2760 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -731,7 +731,7 @@
 //
 #define JUNCTION_DEVIATION
 #if ENABLED(JUNCTION_DEVIATION)
-  #define JUNCTION_DEVIATION_MM 0.06  // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.001  // (mm) Distance from real junction edge
 #endif
 
 /**
@@ -1005,7 +1005,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 240
+#define Z_MAX_POS 245
 
 /**
  * Software Endstops
@@ -1129,7 +1129,7 @@
   // Gradually reduce leveling correction until a set height is reached,
   // at which point movement will be level to the machine's XY plane.
   // The height can be set with M420 Z<height>
-  #define ENABLE_LEVELING_FADE_HEIGHT
+  //#define ENABLE_LEVELING_FADE_HEIGHT
 
   // For Cartesian machines, instead of dividing moves on mesh boundaries,
   // split up moves into short segments like a Delta. This follows the
