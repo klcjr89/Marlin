@@ -290,7 +290,7 @@
 #define E5_AUTO_FAN_PIN -1
 #define CHAMBER_AUTO_FAN_PIN -1
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 40
-#define EXTRUDER_AUTO_FAN_SPEED 45   // 255 == full speed
+#define EXTRUDER_AUTO_FAN_SPEED 64   // 255 == full speed
 
 /**
  * Part-Cooling Fan Multiplexer
