@@ -821,25 +821,6 @@
 //#define Z_PROBE_SERVO_NR 0   // Defaults to SERVO 0 connector.
 //#define Z_SERVO_ANGLES {70,0}  // Z Servo Deploy and Stow angles
 
-/**
- * The BLTouch probe uses a Hall effect sensor and emulates a servo.
- */
-//#define BLTOUCH
-#if ENABLED(BLTOUCH)
-//#define BLTOUCH_DELAY 375   // (ms) Enable and increase if needed
-
-/**
- * BLTouch V3.0 and newer smart series
- * For genuine BLTouch 3.0 sensors. Clones may be confused by 3.0 command angles. YMMV.
- * If the pin trigger is not detected, first try swapping the black and white wires then toggle this.
- */
-//#define BLTOUCH_V3
-#if ENABLED(BLTOUCH_V3)
-//#define BLTOUCH_FORCE_5V_MODE
-//#define BLTOUCH_FORCE_OPEN_DRAIN_MODE
-#endif
-#endif
-
 // A probe that is deployed and stowed with a solenoid pin (SOL1_PIN)
 //#define SOLENOID_PROBE
 
