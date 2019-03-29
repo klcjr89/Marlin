@@ -712,7 +712,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 600 }
+#define DEFAULT_MAX_ACCELERATION      { 2000, 2000, 100, 600 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -1001,11 +1001,11 @@
 
 // The size of the print bed
 #define X_BED_SIZE 220
-#define Y_BED_SIZE 210
+#define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS -15
-#define Y_MIN_POS -15
+#define Y_MIN_POS -26
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
