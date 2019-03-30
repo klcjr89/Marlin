@@ -1495,7 +1495,7 @@
 
   #if AXIS_IS_TMC(E0)
     #define E0_CURRENT    200
-    #define E0_MICROSTEPS  16
+    #define E0_MICROSTEPS   8
     #define E0_RSENSE    0.11
   #endif
 
@@ -1657,8 +1657,8 @@
   //#define SENSORLESS_PROBING // TMC2130 only
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
-    #define X_STALL_SENSITIVITY  8
-    #define Y_STALL_SENSITIVITY  10
+    #define X_STALL_SENSITIVITY  6
+    #define Y_STALL_SENSITIVITY  8
     //#define Z_STALL_SENSITIVITY  8
   #endif
 
