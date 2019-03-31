@@ -290,7 +290,7 @@
 #define E5_AUTO_FAN_PIN -1
 #define CHAMBER_AUTO_FAN_PIN -1
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 40
-#define EXTRUDER_AUTO_FAN_SPEED 45   // 255 == full speed
+#define EXTRUDER_AUTO_FAN_SPEED 50   // 255 == full speed
 
 /**
  * Part-Cooling Fan Multiplexer
@@ -921,7 +921,7 @@
 
   // Enable this option and reduce the value to optimize screen updates.
   // The normal delay is 10µs. Use the lowest value that still gives a reliable display.
-  //#define DOGM_SPI_DELAY_US 5
+  #define DOGM_SPI_DELAY_US 20
 
   // Swap the CW/CCW indicators in the graphics overlay
   //#define OVERLAY_GFX_REVERSE
