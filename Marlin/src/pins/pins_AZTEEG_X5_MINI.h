@@ -93,10 +93,8 @@
 //
 #define HEATER_BED_PIN     P2_07
 #define HEATER_0_PIN       P2_05
-//#ifndef FAN_PIN
-  //#define FAN_PIN          P0_26
-//#endif
-#define FAN1_PIN           P1_25
+#define E0_AUTO_FAN_PIN    P0_26
+#define FAN_PIN            P1_25
 
 //
 // Display
