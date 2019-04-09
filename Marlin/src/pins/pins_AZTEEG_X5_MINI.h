@@ -96,10 +96,8 @@
 //
 #define HEATER_BED_PIN     P2_07
 #define HEATER_0_PIN       P2_05
-#ifndef FAN_PIN
-  #define FAN_PIN          P0_26
-#endif
-#define FAN1_PIN           P1_25
+#define E0_AUTO_FAN_PIN    P0_26
+#define FAN_PIN            P1_25
 
 //
 // Display
@@ -113,15 +111,15 @@
     // 10-pin IDC connector trimmed or replaced with a 12-pin IDC connector to fit J3.
     // Requires REVERSE_ENCODER_DIRECTION in Configuration.h
 
-    #define BEEPER_PIN     P2_11   // J3-3 & AUX-4
+    #define BEEPER_PIN     P1_31   // J3-3 & AUX-4
 
-    #define BTN_EN1        P0_16   // J3-7 & AUX-4
-    #define BTN_EN2        P1_23   // J3-5 & AUX-4
-    #define BTN_ENC        P3_25   // J3-4 & AUX-4
+    #define BTN_EN1        P1_23   // J3-7 & AUX-4
+    #define BTN_EN2        P2_11   // J3-5 & AUX-4
+    #define BTN_ENC        P3_26   // J3-4 & AUX-4
 
-    #define LCD_PINS_RS    P0_15   // J3-9 & AUX-4 (CS)
+    #define LCD_PINS_RS    P0_16   // J3-9 & AUX-4 (CS)
     #define LCD_PINS_ENABLE P0_18  // J3-10 & AUX-3 (SID, MOSI)
-    #define LCD_PINS_D4    P2_06   // J3-8 & AUX-3 (SCK, CLK)
+    #define LCD_PINS_D4    P0_15   // J3-8 & AUX-3 (SCK, CLK)
 
   #else
 
