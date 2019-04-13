@@ -60,18 +60,22 @@
 #define X_STEP_PIN         P2_01
 #define X_DIR_PIN          P0_11
 #define X_ENABLE_PIN       P0_10
+#define X_CS_PIN           P1_30
 
 #define Y_STEP_PIN         P2_02
 #define Y_DIR_PIN          P0_20
 #define Y_ENABLE_PIN       P0_19
+#define Y_CS_PIN           P0_25
 
 #define Z_STEP_PIN         P2_03
 #define Z_DIR_PIN          P0_22
 #define Z_ENABLE_PIN       P0_21
+#define Z_CS_PIN           P4_29
 
 #define E0_STEP_PIN        P2_00
 #define E0_DIR_PIN         P0_05
 #define E0_ENABLE_PIN      P0_04
+#define E0_CS_PIN          P1_22
 
 //
 // DIGIPOT slave addresses
