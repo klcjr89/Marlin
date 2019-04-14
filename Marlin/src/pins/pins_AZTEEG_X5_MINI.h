@@ -75,7 +75,7 @@
 #define E0_STEP_PIN        P2_00
 #define E0_DIR_PIN         P0_05
 #define E0_ENABLE_PIN      P0_04
-#define E0_CS_PIN          P1_22
+#define E0_CS_PIN          P2_08
 
 //
 // DIGIPOT slave addresses
