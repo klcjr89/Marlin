@@ -785,7 +785,7 @@
   // Since the FAT gets out of order with usage, SDCARD_SORT_ALPHA is recommended.
   #define SDCARD_RATHERRECENTFIRST
 
-  #define SD_MENU_CONFIRM_START             // Confirm the selected SD file before printing
+  //#define SD_MENU_CONFIRM_START             // Confirm the selected SD file before printing
 
   //#define MENU_ADDAUTOSTART               // Add a menu option to run auto#.g files
 
@@ -1027,14 +1027,14 @@
  *
  * Warning: Does not respect endstops!
  */
-//#define BABYSTEPPING
+#define BABYSTEPPING
 #if ENABLED(BABYSTEPPING)
   //#define BABYSTEP_WITHOUT_HOMING
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
   #define BABYSTEP_INVERT_Z false           // Change if Z babysteps should go the other way
   #define BABYSTEP_MULTIPLICATOR  1         // Babysteps are very small. Increase for faster motion.
 
-  //#define DOUBLECLICK_FOR_Z_BABYSTEPPING  // Double-click on the Status Screen for Z Babystepping.
+  #define DOUBLECLICK_FOR_Z_BABYSTEPPING  // Double-click on the Status Screen for Z Babystepping.
   #if ENABLED(DOUBLECLICK_FOR_Z_BABYSTEPPING)
     #define DOUBLECLICK_MAX_INTERVAL 1250   // Maximum interval between clicks, in milliseconds.
                                             // Note: Extra time may be added to mitigate controller latency.
@@ -1539,7 +1539,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT    800
+    #define E0_CURRENT    700
     #define E0_MICROSTEPS  16
     #define E0_RSENSE   0.075
   #endif
