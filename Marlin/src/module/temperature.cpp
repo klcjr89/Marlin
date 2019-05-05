@@ -136,7 +136,6 @@ hotend_info_t Temperature::temp_hotend[HOTENDS]; // = { 0 }
 
   #if ENABLED(PROBING_FANS_OFF)
     bool Temperature::fans_paused; // = false;
-    uint8_t Temperature::paused_fan_speed[FAN_COUNT]; // = { 0 }
   #endif
 
   #if ENABLED(ADAPTIVE_FAN_SLOWING)
@@ -175,19 +174,20 @@ hotend_info_t Temperature::temp_hotend[HOTENDS]; // = { 0 }
     #endif
   }
 
-  #if ENABLED(PROBING_FANS_OFF)
+  #if EITHER(PROBING_FANS_OFF, ADVANCED_PAUSE_FANS_PAUSE)
 
     void Temperature::set_fans_paused(const bool p) {
+      static uint8_t saved_fan_speed[FAN_COUNT]; // = { 0 }
       if (p != fans_paused) {
         fans_paused = p;
         if (p)
-          FANS_LOOP(x) { paused_fan_speed[x] = fan_speed[x]; fan_speed[x] = 0; }
+          FANS_LOOP(i) { saved_fan_speed[i] = fan_speed[i]; fan_speed[i] = 0; }
         else
-          FANS_LOOP(x) fan_speed[x] = paused_fan_speed[x];
+          FANS_LOOP(i) fan_speed[i] = saved_fan_speed[i];
       }
     }
 
-  #endif // PROBING_FANS_OFF
+  #endif
 
 #endif // FAN_COUNT > 0
 

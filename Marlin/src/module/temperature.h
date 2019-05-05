@@ -405,7 +405,6 @@ class Temperature {
 
       #if ENABLED(PROBING_FANS_OFF)
         static bool fans_paused;
-        static uint8_t paused_fan_speed[FAN_COUNT];
       #endif
 
       static constexpr inline uint8_t fanPercent(const uint8_t speed) { return ui8_to_percent(speed); }
@@ -449,7 +448,7 @@ class Temperature {
 
       #endif // HAS_LCD_MENU
 
-      #if ENABLED(PROBING_FANS_OFF)
+      #if EITHER(PROBING_FANS_OFF, ADVANCED_PAUSE_FANS_PAUSE)
         void set_fans_paused(const bool p);
       #endif
 
