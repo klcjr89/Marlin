@@ -51,7 +51,7 @@
 #define Z_STOP_PIN         P1_28
 
 #ifndef FILWIDTH_PIN
-  #define FILWIDTH_PIN     P2_04
+  #define FILWIDTH_PIN     2
 #endif
 
 //
@@ -65,17 +65,17 @@
 #define Y_STEP_PIN         P2_02
 #define Y_DIR_PIN          P0_20
 #define Y_ENABLE_PIN       P0_19
-#define Y_CS_PIN           P0_25
+#define Y_CS_PIN           P4_29
 
 #define Z_STEP_PIN         P2_03
 #define Z_DIR_PIN          P0_22
 #define Z_ENABLE_PIN       P0_21
-#define Z_CS_PIN           P4_29
+#define Z_CS_PIN           P2_08
 
 #define E0_STEP_PIN        P2_00
 #define E0_DIR_PIN         P0_05
 #define E0_ENABLE_PIN      P0_04
-#define E0_CS_PIN          P2_08
+#define E0_CS_PIN          P1_22
 
 //
 // DIGIPOT slave addresses
