@@ -1185,15 +1185,18 @@ void Planner::check_axes_activity() {
   #endif
 
   if (has_blocks_queued()) {
-    #if FAN_COUNT > 0
-      FANS_LOOP(i)
-        tail_fan_speed[i] = thermalManager.scaledFanSpeed(i, block_buffer[block_buffer_tail].fan_speed[i]);
-    #endif
-
     block_t* block;
 
-    #if ENABLED(BARICUDA)
+    #if FAN_COUNT > 0 || ENABLED(BARICUDA)
       block = &block_buffer[block_buffer_tail];
+    #endif
+
+    #if FAN_COUNT > 0
+      FANS_LOOP(i)
+        tail_fan_speed[i] = thermalManager.scaledFanSpeed(i, block->fan_speed[i]);
+    #endif
+
+    #if ENABLED(BARICUDA)
       #if HAS_HEATER_1
         tail_valve_pressure = block->valve_pressure;
       #endif
