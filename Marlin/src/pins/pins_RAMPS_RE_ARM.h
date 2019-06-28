@@ -1,9 +1,9 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (C) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
- * Copyright (C) 2011 Camiel Gubbels / Erik van der Zalm
+ * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -239,9 +239,13 @@
 // M3/M4/M5 - Spindle/Laser Control
 //            Use servo pins, if available
 //
-#if ENABLED(SPINDLE_LASER_ENABLE) && !PIN_EXISTS(SPINDLE_LASER_ENA)
+#if HAS_CUTTER && !PIN_EXISTS(SPINDLE_LASER_ENA)
   #if NUM_SERVOS > 1
-    #error "SPINDLE_LASER_ENABLE requires 3 free servo pins."
+    #if ENABLED(SPINDLE_FEATURE)
+      #error "SPINDLE_FEATURE requires 3 free servo pins."
+    #else
+      #error "LASER_FEATURE requires 3 free servo pins."
+    #endif
   #endif
   #define SPINDLE_LASER_ENA_PIN    SERVO1_PIN   // (6) Pin should have a pullup/pulldown!
   #define SPINDLE_LASER_PWM_PIN    SERVO3_PIN   // (4) MUST BE HARDWARE PWM
