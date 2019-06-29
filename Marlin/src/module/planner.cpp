@@ -1272,13 +1272,13 @@ void Planner::check_axes_activity() {
     #define FAN_SET(F) do{ KICKSTART_FAN(F); _FAN_SET(F); }while(0)
 
     #if HAS_FAN0
-      FAN_SET(0)
+      FAN_SET(0);
     #endif
     #if HAS_FAN1
-      FAN_SET(1)
+      FAN_SET(1);
     #endif
     #if HAS_FAN2
-      FAN_SET(2)
+      FAN_SET(2);
     #endif
 
   #endif // FAN_COUNT > 0
