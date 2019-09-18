@@ -819,6 +819,9 @@ namespace ExtUI {
           #endif
         }
       }
+      void onMeshUpdate(const uint8_t xpos, const uint8_t ypos, const float zval) {
+        UNUSED(xpos); UNUSED(ypos); UNUSED(zval);
+      }
     #endif
   #endif
 
@@ -980,11 +983,11 @@ namespace ExtUI {
   }
 
   bool FileList::isAtRootDir() {
-    #if ENABLED(SDSUPPORT)
-      card.flag.workDirIsRoot;
-    #else
-      return true;
-    #endif
+    return (true
+      #if ENABLED(SDSUPPORT)
+        && card.flag.workDirIsRoot
+      #endif
+    );
   }
 
   void FileList::upDir() {
