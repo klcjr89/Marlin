@@ -648,7 +648,7 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -928,7 +928,7 @@
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Feedrate (mm/m) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 6)
+#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 1)
 
 /**
  * Multiple Probing
